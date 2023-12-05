@@ -1,0 +1,104 @@
+[
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company1.avif",
+        "location": "East Java, Indonesia",
+        "companyName": "Company 1",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "Full-Time",
+        "salaryRange": "$50,000 - $80,000"
+    },
+
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company2.png",
+        "location": "East Java, Indonesia",
+        "companyName": "Company 2",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "Full-Time",
+        "salaryRange": "$50,000 - $80,000"
+    },
+
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company3.png",
+        "location": "East Java, Indonesia",
+        "companyName": "Company 3",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "Full-Time",
+        "salaryRange": "$50,000 - $80,000"
+    },
+
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company4.png",
+        "location": "East Java, Indonesia",
+        "companyName": "Company 4",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "Full-Time",
+        "salaryRange": "$50,000 - $80,000"
+    },
+
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company5.png",
+        "location": "East Java, Indonesia",
+        "companyName": "Company 5",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "Full-Time",
+        "salaryRange": "$50,000 - $80,000"
+    },
+
+
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company6.png",
+        "location": "East Java, Indonesia",
+        "companyName": "Company 6",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "Full-Time",
+        "salaryRange": "$50,000 - $80,000"
+    },
+
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company5.png",
+        "location": "East Java, Indonesia",
+        "companyName": "Company 5",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "Full-Time",
+        "salaryRange": "$50,000 - $80,000"
+    },
+
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company5.png",
+        "location": "East Java, Indonesia",
+        "companyName": "Company 5",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "Full-Time",
+        "salaryRange": "$50,000 - $80,000"
+    }
+
+
+    
+   
+]
+
+

@@ -2,3 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* .hidden {
+    display: none;
+} */
+
+.toggle-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #81c264;
+    border: none;
+    font-size: 1.2rem;
+    outline: none;
+
+
+}
+
+.hr {
+    border-top: 1px solid rgb(76, 174, 76);
+    margin-top: 25px;
+    margin-bottom: 15px;
+
+}
