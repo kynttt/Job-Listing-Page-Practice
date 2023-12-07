@@ -1,6 +1,10 @@
 # Practice Project README
 
-![Project Logo](./assets/joblist_page.png)
+## Project Demo
+
+[![Project Demo](https://streamable.com/vqvzaq)](https://streamable.com/vqvzaq)
+
+Click on the image above to watch the demo.
 
 This is a practice project created for learning and experimentation purposes. It is not intended for production use.
 
