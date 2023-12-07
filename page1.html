@@ -8,6 +8,37 @@
 
     <link rel="stylesheet" href="./styles.css">
 </head>
+<style>
+    @media (max-width: 1023px) {
+
+        /* Hide the sidebar by default on small screens */
+        .sidebar {
+            display: none;
+        }
+
+        /* Adjust styles for the toggle button */
+        #sidebarToggleBtn {
+            display: block;
+        }
+    }
+
+    /* Styles for the button that will be visible on small screens */
+    .small-screen-button {
+        display: none;
+        /* Initially hide the button on all screens */
+    }
+
+    @media only screen and (max-width: 768px) {
+
+        /* Display the button only on screens with a maximum width of 768 pixels or less */
+        .small-screen-button {
+            display: block;
+        }
+    }
+
+
+    
+</style>
 
 <body class="bg-slate-100">
     <div class="flex">
@@ -19,371 +50,64 @@
                 Job Listing
             </h1>
 
+            
+
+
+            <!-- 4 grids divided into 2 parts (1/4(span1) and 3/4(span3)) -->
             <div class="flex inline-block grid-cols-4">
 
-                <!-- Start of Span-1 Section -->
+
+
+                <!-- Start of Span1 Section -->
                 <div class="font-thin leading-8" style="grid-column: span 1;">
-                    <!-- Sidebar -->
-                    <div class="rounded-lg sidebar p-6 bg-tertiary w-72 mt-3 mr-8">
-                        <h2 class="text-xl font-semibold mb-4">Filter Jobs</h2>
-
-                        <!-- Location Search -->
-                        <div class="mb-4">
-                            <h2 class="flex items-center justify-between text-md font-medium mb-2">
-                                Location
-                                <button class="toggle-btn" onclick="toggleContent('locationContent')">-</button>
-                            </h2>
-                            <div id="locationContent" class="content">
-                                <input type="text" id="location" name="location"
-                                    class=" appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                    placeholder="Washington DC" />
-                            </div>
-                        </div>
-
-                        <hr class="hr">
-                        </hr>
-
-                        <!-- Job Type -->
-                        <div class="mb-4">
-                            <h2 class="flex items-center justify-between text-md font-medium mb-2">
-                                Job Type
-                                <button class="toggle-btn" onclick="toggleContent('jobTypeContent')">-</button>
-                            </h2>
-                            <div id="jobTypeContent" class="content">
-                                <div class="ml-2">
-                                    <input class="border-gray-500" type="checkbox" id="fixedPrice" name="jobType"
-                                        value="fixedPrice" />
-                                    <label for="fixedPrice">Fixed Price</label>
-                                </div>
-                                <div class="ml-2">
-                                    <input type="checkbox" id="fullTime" name="jobType" value="fullTime" />
-                                    <label for="fullTime">Full-Time</label>
-                                </div>
-                                <div class="ml-2">
-                                    <input type="checkbox" id="partTime" name="jobType" value="partTime" />
-                                    <label for="partTime">Part-Time</label>
-                                </div>
-                                <div class="ml-2">
-                                    <input type="checkbox" id="freelance" name="jobType" value="freelance" />
-                                    <label for="freelance">Freelance</label>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="hr">
-                        </hr>
 
 
-                        <!-- Experience -->
-                        <div class="mb-4">
-                            <h2 class="flex items-center justify-between text-md font-medium mb-2">
-                                Experience
-                                <button class="toggle-btn" onclick="toggleContent('experienceContent')">-</button>
-                            </h2>
-                            <div id="experienceContent" class="content">
-                                <div class="ml-2">
-                                    <input type="checkbox" id="fresher" name="experience" value="fresher" />
-                                    <label for="fresher">Fresher</label>
-                                </div>
-                                <div class="ml-2">
-                                    <input type="checkbox" id="intermediate" name="experience" value="intermediate" />
-                                    <label for="intermediate">Intermediate</label>
-                                </div>
-                                <div class="ml-2">
-                                    <input type="checkbox" id="noExperience" name="experience" value="noExperience" />
-                                    <label for="noExperience">No Experience</label>
-                                </div>
-                                <div class="ml-2">
-                                    <input type="checkbox" id="internship" name="experience" value="internship" />
-                                    <label for="internship">Internship</label>
-                                </div>
-                                <div class="ml-2">
-                                    <input type="checkbox" id="expert" name="experience" value="expert" />
-                                    <label for="expert">Expert</label>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="hr">
-                        </hr>
+                    <!--Start of Sidebar -->
 
+                    <div id="sidebar" class="rounded-lg sidebar p-6 bg-tertiary w-72 mt-3 mr-8"></div>
+                    <!--End of Sidebar -->
 
-                        <!-- Salary -->
-                        <div class="mb-4">
-                            <h2 class="flex items-center justify-between text-md font-medium mb-2">
-                                Salary
-                                <button class="toggle-btn" onclick="toggleContent('salaryContent')">-</button>
-                            </h2>
-
-                            <div class="flex row">
-
-                                <div class="flex flex-col items-center">
-                                    <div class="bg-gray-50 p-0 px-3 rounded">
-                                        <span>0</span>
-                                    </div>
-
-                                </div>
-                                <span class="mx-3">-</span>
-
-
-                                <div class="flex flex-col items-center">
-                                    <div class="bg-gray-50 p-0 px-3 rounded">
-                                        <span id="salaryValue">0</span>
-                                    </div>
-
-                                </div>
-                                <span class="ms-1">USD</span>
-
-
-                            </div>
-
-                            <div id="salaryContent" class="content my-2">
-                                <div class="flex items-center flex-col">
-                                    <div class="flex items-center mb-2">
-
-                                        <input type="range" id="salaryRange" min="0" max="1000" step="1" class="w-56"
-                                            onchange="updateSalaryValue()">
-
-
-
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div id="salaryContent" class="content my-2">
-                                <div class="flex items-center flex-col">
-
-                                    <div class="flex items-center overflow-x-auto">
-                                        <input type="radio" id="weekly" name="salaryType" value="weekly" class="hidden"
-                                            onchange="updateSalaryType('weekly')">
-                                        <label for="weekly"
-                                            class="salary-type-label bg-gray-200 text-gray-700 px-2 rounded-xl cursor-pointer hover:bg-primary">
-                                            Weekly
-                                        </label>
-
-                                        <input type="radio" id="monthly" name="salaryType" value="monthly"
-                                            class="hidden" onchange="updateSalaryType('monthly')">
-                                        <label for="monthly"
-                                            class="salary-type-label bg-gray-200 text-gray-700 px-2 rounded-xl cursor-pointer ml-4 hover:bg-primary">
-                                            Monthly
-                                        </label>
-
-                                        <input type="radio" id="hourly" name="salaryType" value="hourly" class="hidden"
-                                            onchange="updateSalaryType('hourly')">
-                                        <label for="hourly"
-                                            class="salary-type-label bg-gray-200 text-gray-700 px-2 rounded-xl cursor-pointer ml-4 hover:bg-primary">
-                                            Hourly
-                                        </label>
-
-
-                                    </div>
-
-
-
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <hr class="hr">
-                        </hr>
-
-
-
-                        <!-- Category Section -->
-                        <div class="mb-4">
-                            <h2 class="flex items-center justify-between text-md font-medium mb-2">
-                                Category
-                                <button class="toggle-btn" onclick="toggleContent('categoryContent')">-</button>
-                            </h2>
-                            <div id="categoryContent" class="content">
-                                <div class="ml-2">
-                                    <input type="checkbox" id="webDesign" name="category" value="webDesign" />
-                                    <label for="webDesign">Web Design</label>
-                                </div>
-                                <div class="ml-2">
-                                    <input type="checkbox" id="designCreative" name="category" value="designCreative" />
-                                    <label for="designCreative">Design & Creative</label>
-                                </div>
-                                <div class="ml-2">
-                                    <input type="checkbox" id="itDevelopment" name="category" value="itDevelopment" />
-                                    <label for="itDevelopment">IT & Development</label>
-                                </div>
-                                <div class="ml-2">
-                                    <input type="checkbox" id="webMobileDev" name="category" value="webMobileDev" />
-                                    <label for="webMobileDev">Web and Mobile Dev</label>
-                                </div>
-                                <div class="ml-2">
-                                    <input type="checkbox" id="writing" name="category" value="writing" />
-                                    <label for="writing">Writing</label>
-                                </div>
-
-                                <!-- Additional Categories (Initially Hidden) -->
-                                <div id="additionalCategories" class="hidden">
-                                    <div class="ml-2">
-                                        <input type="checkbox" id="salesMarketing" name="category"
-                                            value="salesMarketing" />
-                                        <label for="salesMarketing">Sales & Marketing</label>
-                                    </div>
-                                    <div class="ml-2">
-                                        <input type="checkbox" id="musicAudio" name="category" value="musicAudio" />
-                                        <label for="musicAudio">Music & Audio</label>
-                                    </div>
-                                </div>
-
-                                <!-- Show More/Less Button (Initially Visible) -->
-                                <button class="bg-gray-400 text-white rounded-lg mt-2 w-full"
-                                    onclick="toggleShowMoreCategories()">+ Show More</button>
-                            </div>
-                        </div>
-                        <!-- End Category Section -->
-
-                        <hr class="hr">
-                        </hr>
-
-                        <!-- Tags Section -->
-                        <div class="mb-4">
-                            <h2 class="flex items-center justify-between text-md font-medium mb-2">
-                                Tags
-                                <button class="toggle-btn" onclick="toggleContent('tagsContent')">-</button>
-                            </h2>
-                            <div id="tagsContent" class="content overflow-x-auto">
-                                <div class="items-center p-0 m-0 text-sm ">
-                                    <button class="bg-primary text-white p-1 rounded-xl mr-2 mb-1">Web Design</button>
-                                    <button class="bg-primary text-white p-1 rounded-xl mr-2 mb-1">Squarespace</button>
-                                    <button class="bg-primary text-white p-1 rounded-xl mr-2 mb-1">Layout
-                                        Design</button>
-                                    <button class="bg-primary text-white p-1 rounded-xl mr-2 mb-1">Web
-                                        Development</button>
-                                    <button class="bg-primary text-white p-1 rounded-xl mr-2 mb-1">React</button>
-                                    <button class="bg-primary text-white p-1 rounded-xl mb-1">Fullstack</button>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!--End of Tags Section -->
-                        <hr class="hr">
-                        </hr>
-
-                        <!-- Apply Filter Button -->
-                        <button class="bg-primary text-white py-1 rounded-lg mt-4 w-full font-bold">Apply
-                            Filter</button>
-
-
-                    </div>
-                    <!-- End of Sidebar -->
 
 
                 </div>
-                <!-- End of Span-1 Section -->
+                <!-- End of Span1 Section -->
 
 
 
-                <!-- Start of Span-3 Section -->
+                <!-- Start of Span3 Section -->
                 <div style="grid-column: span 3;">
-                    <!-- Start of Joblist Section -->
-                    <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6"> -->
 
 
-                    <!--Start of Card Section -->
-                    <div id="cardSection"
-                        class="flex flex-row justify-around grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
-                        <script>
-                            // Fetch data from JSON file
-                            fetch('data.json')
-                                .then(response => response.json())
-                                .then(data => {
-                                    // Render the cards using the fetched data
-                                    renderCards(data);
-                                })
-                                .catch(error => console.error('Error fetching data:', error));
 
-                            // Function to render cards
-                            function renderCards(data) {
-                                const cardSection = document.getElementById('cardSection');
-
-                                // Loop through the data and create cards
-                                data.forEach(item => {
-                                    const cardContainer = document.createElement('div');
-                                    cardContainer.className = 'card-container bg-white p-3 rounded-lg shadow-md m-3 ';
-
-                                    cardContainer.innerHTML = `
-                                            <div class="status-badge bg-secondary inline-block mb-4 py-1 px-4 rounded-full">
-                                                <p class="text-gray-600 flex items-center">
-                                                    <img src="${item.verificationBadge}" alt="Verification Badge" class="w-4 mr-2 inline-block">
-                                                    ${item.companyStatus}
-                                                </p>
-                                            </div>
-                                            <div class="company-details flex items-center leading-3 mb-3">
-                                                <img src="${item.companyLogo}" alt="${item.companyName} Logo" class="w-10 h-10 mr-4">
-                                                <div>
-                                                    <p class="text-gray-600 text-xs">${item.location}</p>
-                                                    <h2 class="text-lg font-bold">${item.companyName}</h2>
-                                                </div>
-                                            </div>
-                                            <hr />
-                                            <h2 class="job-title text-2xl my-4 font-semibold">${item.jobTitle}</h2>
-                                            <p class="job-description text-gray-500 mb-5">${item.jobDescription}</p>
-                                            <div class="job-info flex flex-row items-center">
-                                                <div class="flex-grow">
-                                                    <p class="job-info-item text-gray-500 flex items-center">
-                                                        <img src="./assets/job-icon.png" alt="Job Icon" class="w-4 mr-2">
-                                                        ${item.jobType}
-                                                    </p>
-                                                    <p class="job-info-item text-gray-500 flex items-center">
-                                                        <img src="./assets/dollar.png" alt="Dollar Icon" class="w-4 mr-2">
-                                                        ${item.salaryRange}
-                                                    </p>
-                                                </div>
-                                                <div>
-                                                    <button class="apply-button bg-primary font-normal text-white px-8 py-2 rounded text-xs">
-                                                        APPLY NOW
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        `;
-
-                                    cardSection.appendChild(cardContainer);
-                                });
-                            }
-                        </script>
+                    <!-- Button for side bar -->
+                    <div class="text-center">
+                        <button class="rounded-lg border-solid small-screen-button font-semibold bg-primary w-64 mx-auto mt-4 py-3" onclick="toggleSide()">Filter</button>
                     </div>
-                    <!--End of Card Section -->
+
+                    <div id="sidebarContainer" style="display: none;" class="rounded-lg sidebar p-6 bg-tertiary w-full mt-3 mr-8"></div>
+                    
 
 
-                    <div id="includedContent"></div>
+                    <!--Start of Job list Card Section -->
+                    <div id="cardSection"
+                        class="text-bold flex flex-row justify-around grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+                    </div>
+                    <!--End of Job list Card Section -->
 
-<script>
-  // Fetch content from pagination.html
-  fetch('./pagination.html')
-    .then(response => response.text())
-    .then(html => {
-      // Inject the content into the designated element
-      document.getElementById('includedContent').innerHTML = html;
-    })
-    .catch(error => console.error('Error fetching content:', error));
-</script>
-
-
+                    <!-- Start of Pagination Section -->
+                    <div id="pagination"></div>
+                    <!--End of  Pagination Section -->
 
                 </div>
-                <!-- End of Joblist Section -->
-                <!-- Start of Span-1 Section -->
-
-
-
-
-
+                <!-- End of Span3 Section -->
 
             </div>
+
         </div>
 
-    </div>
+        <script src="./script.js"></script>
+        
 
-    </div>
-
-
-
-    <script src="./script.js"></script>
 </body>
 
 </html>
