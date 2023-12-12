@@ -89,18 +89,68 @@ fetch('./pagination.html')
 
 
 
-// Joblist Cards
-fetch('data.json')
-    .then(response => response.json())
-    .then(data => {
-        // Render the cards using the fetched data
-        renderCards(data.slice(0, 6));
-    })
-    .catch(error => console.error('Error fetching data:', error));
+function applyFilters() {
+    // Get selected location
+    const selectedLocation = document.getElementById('location').value.toLowerCase();
+
+    // Get selected job types
+    const jobTypes = document.getElementsByName('jobType');
+    const selectedJobTypes = Array.from(jobTypes)
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.value.toLowerCase());
+
+    console.log('Selected Location:', selectedLocation);
+    console.log('Selected Job Types:', selectedJobTypes);
+
+    // Fetch data and apply filters
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            console.log('Original Data:', data);
+
+            // Apply filters
+            const filteredData = data.filter(item => {
+                const locationFilter = selectedLocation === 'all' || item.location.toLowerCase() === selectedLocation;
+                const jobTypeFilter = selectedJobTypes.length === 0 || selectedJobTypes.some(type => type === item.jobType.toLowerCase());
+                return jobTypeFilter && locationFilter; // Ensure location filter is applied after job type filter
+            });
+
+            console.log('Filtered Data:', filteredData);
+
+            // Display counts
+            displayFilterCounts(selectedLocation, filteredData.length);
+
+            // Render filtered cards
+            renderCards(filteredData);
+        })
+        .catch(error => console.error('Error fetching or filtering data:', error));
+}
+
+function displayFilterCounts(selectedLocation, count) {
+    const filterCountElement = document.getElementById('filterCount');
+    const locationText = selectedLocation === 'all' ? 'All locations' : `Location: ${selectedLocation}`;
+    filterCountElement.textContent = count > 0 ? `Showing ${count} jobs | ${locationText}` : `No jobs match the filters | ${locationText}`;
+}
+
+
+
+
+
+
+
+
+
+
+// Additional functions for toggling content and updating UI
+function toggleContent(id) {
+    const content = document.getElementById(id);
+    content.classList.toggle('hidden');
+}
 
 // Function to render cards
 function renderCards(data) {
     const cardSection = document.getElementById('cardSection');
+    cardSection.innerHTML = ''; // Clear existing cards
 
     // Loop through the data and create cards
     data.forEach(item => {
@@ -146,21 +196,28 @@ function renderCards(data) {
         cardSection.appendChild(cardContainer);
     });
 }
+
+function clearCards() {
+    const cardSection = document.getElementById('cardSection');
+    cardSection.innerHTML = '';
+}
 // End of Function to render cards
 
 
 
+
+
 // Sidebar
- fetch('sidebar.html')
- .then(response => response.text())
- .then(content => {
-     document.getElementById('sidebar').innerHTML = content;
- })
- .catch(error => console.error('Error fetching sidebar content:', error));
+fetch('sidebar.html')
+    .then(response => response.text())
+    .then(content => {
+        document.getElementById('sidebar').innerHTML = content;
+    })
+    .catch(error => console.error('Error fetching sidebar content:', error));
 
 
 // Sidebar Toggle
- function toggleSide() {
+function toggleSide() {
     var sidebarContainer = document.getElementById('sidebarContainer');
 
     // If the container is currently hidden, load the content from sidebarsm.html
@@ -183,3 +240,127 @@ function loadSidebarContent() {
     xhr.open('GET', 'sidebarSm.html', true);
     xhr.send();
 }
+
+
+// Filter Button
+function toggleTag(button) {
+    // Toggle 'bg-selected' class on the clicked button
+    button.classList.toggle('bg-selected');
+}
+
+
+
+
+
+
+
+
+
+
+// Function for pagination responsiveness
+// Load data from JSON file
+let dataArray = [];
+
+async function loadData() {
+    try {
+        const response = await fetch('./data.json');
+        dataArray = await response.json();
+        updateDisplayedData();
+    } catch (error) {
+        console.error('Error loading data:', error);
+    }
+}
+
+// Pagination variables
+const itemsPerPage = 6;
+let currentPage = 1;
+
+
+// Function to update displayed data based on the current page
+function updateDisplayedData() {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage - 1;
+    const displayedData = dataArray.slice(startIndex, endIndex + 1);
+
+    // Clear previous content
+    clearCards();
+
+    // Update pagination info
+    document.getElementById('start-index').textContent = startIndex + 1;
+    document.getElementById('end-index').textContent = Math.min(endIndex + 1, dataArray.length);
+    document.getElementById('total-results').textContent = dataArray.length;
+
+    // Call renderCards to display the current set of data
+    renderCards(displayedData);
+
+    // Generate dynamic pagination links
+    generatePaginationLinks();
+}
+
+
+// Function to handle page navigation
+function goToPage(page) {
+    if (page >= 1 && page <= Math.ceil(dataArray.length / itemsPerPage)) {
+
+        currentPage = page;
+        updateDisplayedData();
+    }
+}
+
+
+// Function to generate dynamic pagination links
+function generatePaginationLinks() {
+    const paginationContainer = document.getElementById('pagination1');
+    paginationContainer.innerHTML = ''; // Clear previous pagination links
+
+    const totalPages = Math.ceil(dataArray.length / itemsPerPage);
+
+    // Previous page link
+    const prevPage = document.createElement('a');
+    prevPage.href = '#';
+    prevPage.textContent = 'Previous';
+    prevPage.classList.add('relative', 'inline-flex', 'items-center', 'rounded-l-md', 'px-2', 'py-2', 'text-gray-400', 'ring-1', 'ring-inset', 'ring-gray-300', 'hover:bg-gray-50', 'focus:z-20', 'focus:outline-offset-0');
+    prevPage.addEventListener('click', (event) => {
+        event.preventDefault();
+        goToPage(currentPage - 1);
+    });
+    paginationContainer.appendChild(prevPage);
+
+    // Individual page links
+    for (let i = 1; i <= totalPages; i++) {
+        const link = document.createElement('a');
+        link.href = '#';
+        link.textContent = i;
+        link.setAttribute('data-page', i);
+        link.classList.add('relative', 'inline-flex', 'items-center', 'px-4', 'py-2', 'text-sm', 'font-semibold', 'text-gray-900', 'ring-1', 'ring-inset', 'ring-gray-300', 'hover:bg-gray-50', 'focus:z-20', 'focus:outline-offset-0');
+        if (i === currentPage) {
+            link.classList.add('bg-primary', 'text-black');
+        }
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            goToPage(i);
+        });
+        paginationContainer.appendChild(link);
+    }
+
+    // Next page link
+    const nextPage = document.createElement('a');
+    nextPage.href = '#';
+    nextPage.textContent = 'Next';
+    nextPage.classList.add('relative', 'inline-flex', 'items-center', 'rounded-r-md', 'px-2', 'py-2', 'text-gray-400', 'ring-1', 'ring-inset', 'ring-gray-300', 'hover:bg-gray-50', 'focus:z-20', 'focus:outline-offset-0');
+    nextPage.addEventListener('click', (event) => {
+        event.preventDefault();
+        goToPage(currentPage + 1);
+    });
+    paginationContainer.appendChild(nextPage);
+}
+
+// Initial update to display data on page load
+loadData();
+
+
+
+
+
+
+

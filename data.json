@@ -3,47 +3,47 @@
         "companyStatus": "Verified Company",
         "verificationBadge": "./assets/check-badge.png",
         "companyLogo": "./assets/company1.avif",
-        "location": "East Java, Indonesia",
+        "location": "Washington DC",
         "companyName": "Company 1",
         "jobTitle": "Web Designer",
         "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
-        "jobType": "Full-Time",
-        "salaryRange": "$50,000 - $80,000"
+        "jobType": "FullTime",
+        "salaryRange": "$50 - $80"
     },
 
     {
         "companyStatus": "Verified Company",
         "verificationBadge": "./assets/check-badge.png",
         "companyLogo": "./assets/company2.png",
-        "location": "East Java, Indonesia",
+        "location": "California, CA",
         "companyName": "Company 2",
         "jobTitle": "Web Designer",
         "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
-        "jobType": "Full-Time",
-        "salaryRange": "$50,000 - $80,000"
+        "jobType": "FullTime",
+        "salaryRange": "$50 - $80"
     },
 
     {
         "companyStatus": "Verified Company",
         "verificationBadge": "./assets/check-badge.png",
         "companyLogo": "./assets/company3.png",
-        "location": "East Java, Indonesia",
+        "location": "New York",
         "companyName": "Company 3",
         "jobTitle": "Web Designer",
         "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
-        "jobType": "Full-Time",
-        "salaryRange": "$50,000 - $80,000"
+        "jobType": "FullTime",
+        "salaryRange": "$50 - $80"
     },
 
     {
         "companyStatus": "Verified Company",
         "verificationBadge": "./assets/check-badge.png",
         "companyLogo": "./assets/company4.png",
-        "location": "East Java, Indonesia",
+        "location": "Miami",
         "companyName": "Company 4",
         "jobTitle": "Web Designer",
         "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
-        "jobType": "Full-Time",
+        "jobType": "PartTime",
         "salaryRange": "$50,000 - $80,000"
     },
 
@@ -51,11 +51,11 @@
         "companyStatus": "Verified Company",
         "verificationBadge": "./assets/check-badge.png",
         "companyLogo": "./assets/company5.png",
-        "location": "East Java, Indonesia",
+        "location": "Washington DC",
         "companyName": "Company 5",
         "jobTitle": "Web Designer",
         "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
-        "jobType": "Full-Time",
+        "jobType": "PartTime",
         "salaryRange": "$50,000 - $80,000"
     },
 
@@ -64,11 +64,59 @@
         "companyStatus": "Verified Company",
         "verificationBadge": "./assets/check-badge.png",
         "companyLogo": "./assets/company6.png",
-        "location": "East Java, Indonesia",
+        "location": "Washington DC",
         "companyName": "Company 6",
         "jobTitle": "Web Designer",
         "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
-        "jobType": "Full-Time",
+        "jobType": "PartTime",
+        "salaryRange": "$50,000 - $80,000"
+    },
+
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company1.avif",
+        "location": "Washington DC",
+        "companyName": "Company 1",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "FullTime",
+        "salaryRange": "$50 - $80"
+    },
+
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company2.png",
+        "location": "California, CA",
+        "companyName": "Company 2",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "PartTime",
+        "salaryRange": "$50 - $80"
+    },
+
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company3.png",
+        "location": "New York",
+        "companyName": "Company 3",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "FullTime",
+        "salaryRange": "$50 - $80"
+    },
+
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company4.png",
+        "location": "Miami",
+        "companyName": "Company 4",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "PartTime",
         "salaryRange": "$50,000 - $80,000"
     },
 
@@ -76,11 +124,72 @@
         "companyStatus": "Verified Company",
         "verificationBadge": "./assets/check-badge.png",
         "companyLogo": "./assets/company5.png",
-        "location": "East Java, Indonesia",
+        "location": "Washington DC",
         "companyName": "Company 5",
         "jobTitle": "Web Designer",
         "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
-        "jobType": "Full-Time",
+        "jobType": "PartTime",
+        "salaryRange": "$50,000 - $80,000"
+    },
+
+
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company6.png",
+        "location": "Washington DC",
+        "companyName": "Company 12",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "PartTime",
+        "salaryRange": "$50,000 - $80,000"
+    },
+
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company1.avif",
+        "location": "Washington DC",
+        "companyName": "Company 1",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "FullTime",
+        "salaryRange": "$50 - $80"
+    },
+
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company2.png",
+        "location": "California, CA",
+        "companyName": "Company 2",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "FullTime",
+        "salaryRange": "$50 - $80"
+    },
+
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company3.png",
+        "location": "New York",
+        "companyName": "Company 3",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "FullTime",
+        "salaryRange": "$50 - $80"
+    },
+
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company4.png",
+        "location": "Miami",
+        "companyName": "Company 4",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "PartTime",
         "salaryRange": "$50,000 - $80,000"
     },
 
@@ -88,11 +197,72 @@
         "companyStatus": "Verified Company",
         "verificationBadge": "./assets/check-badge.png",
         "companyLogo": "./assets/company5.png",
-        "location": "East Java, Indonesia",
+        "location": "Washington DC",
         "companyName": "Company 5",
         "jobTitle": "Web Designer",
         "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
-        "jobType": "Full-Time",
+        "jobType": "PartTime",
+        "salaryRange": "$50,000 - $80,000"
+    },
+
+
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company6.png",
+        "location": "Washington DC",
+        "companyName": "Company 18",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "PartTime",
+        "salaryRange": "$50,000 - $80,000"
+    },
+
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company1.avif",
+        "location": "Washington DC",
+        "companyName": "Company 1",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "FullTime",
+        "salaryRange": "$50 - $80"
+    },
+
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company2.png",
+        "location": "California, CA",
+        "companyName": "Company 2",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "FullTime",
+        "salaryRange": "$50 - $80"
+    },
+
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company3.png",
+        "location": "New York",
+        "companyName": "Company 3",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "FullTime",
+        "salaryRange": "$50 - $80"
+    },
+
+    {
+        "companyStatus": "Verified Company",
+        "verificationBadge": "./assets/check-badge.png",
+        "companyLogo": "./assets/company4.png",
+        "location": "Miami",
+        "companyName": "Company 4",
+        "jobTitle": "Web Designer",
+        "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
+        "jobType": "PartTime",
         "salaryRange": "$50,000 - $80,000"
     },
 
@@ -100,23 +270,24 @@
         "companyStatus": "Verified Company",
         "verificationBadge": "./assets/check-badge.png",
         "companyLogo": "./assets/company5.png",
-        "location": "East Java, Indonesia",
+        "location": "Washington DC",
         "companyName": "Company 5",
         "jobTitle": "Web Designer",
         "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
-        "jobType": "Full-Time",
+        "jobType": "PartTime",
         "salaryRange": "$50,000 - $80,000"
     },
+
 
     {
         "companyStatus": "Verified Company",
         "verificationBadge": "./assets/check-badge.png",
-        "companyLogo": "./assets/company5.png",
-        "location": "East Java, Indonesia",
-        "companyName": "Company 5",
+        "companyLogo": "./assets/company6.png",
+        "location": "Washington DC",
+        "companyName": "Company 24",
         "jobTitle": "Web Designer",
         "jobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates esse corrupti ex consectetur.",
-        "jobType": "Full-Time",
+        "jobType": "PartTime",
         "salaryRange": "$50,000 - $80,000"
     }
 

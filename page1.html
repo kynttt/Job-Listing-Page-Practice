@@ -7,38 +7,41 @@
     <link href="./dist/output.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./styles.css">
-</head>
-<style>
-    @media (max-width: 1023px) {
 
-        /* Hide the sidebar by default on small screens */
-        .sidebar {
-            display: none;
-        }
-
-        /* Adjust styles for the toggle button */
-        #sidebarToggleBtn {
-            display: block;
-        }
-    }
-
-    /* Styles for the button that will be visible on small screens */
-    .small-screen-button {
-        display: none;
-        /* Initially hide the button on all screens */
-    }
-
-    @media only screen and (max-width: 768px) {
-
-        /* Display the button only on screens with a maximum width of 768 pixels or less */
-        .small-screen-button {
-            display: block;
-        }
-    }
-
-
+    <style>
+        @media (max-width: 1023px) {
     
-</style>
+            /* Hide the sidebar by default on small screens */
+            .sidebar {
+                display: none;
+            }
+    
+            /* Adjust styles for the toggle button */
+            #sidebarToggleBtn {
+                display: block;
+            }
+        }
+    
+        /* Styles for the button that will be visible on small screens */
+        .small-screen-button {
+            display: none;
+            /* Initially hide the button on all screens */
+        }
+    
+        @media only screen and (max-width: 768px) {
+    
+            /* Display the button only on screens with a maximum width of 768 pixels or less */
+            .small-screen-button {
+                display: block;
+            }
+        }
+    
+    
+        
+    </style>
+
+</head>
+
 
 <body class="bg-slate-100">
     <div class="flex">
@@ -49,6 +52,17 @@
             <h1 class="text-3xl font-bold underline text-center no-underline mb-10 mt-5">
                 Job Listing
             </h1>
+
+            <!-- Search Bar -->
+<!-- <div class="mb-4">
+    <h2 class="flex items-center justify-between text-md font-medium mb-2">
+        Search
+    </h2>
+    <input type="text" id="searchBar" class="font-thin border-none appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Search...">
+</div> -->
+
+<p id="filterCount"></p>
+
 
             
 
@@ -89,14 +103,19 @@
 
 
                     <!--Start of Job list Card Section -->
+
+
                     <div id="cardSection"
                         class="text-bold flex flex-row justify-around grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
                     </div>
                     <!--End of Job list Card Section -->
-
+                    
                     <!-- Start of Pagination Section -->
                     <div id="pagination"></div>
                     <!--End of  Pagination Section -->
+                    
+                    
+
 
                 </div>
                 <!-- End of Span3 Section -->
